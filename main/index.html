@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ashish Chavan | Premium Portfolio</title>
+    <meta name="description"
+        content="Ashish Chavan — MCA (AI & ML) student portfolio. Responsive premium UI with video hero, scroll animations, skills, academics, tools, and contact form." />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- AOS (scroll reveal) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0d16;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+    </style>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #0a0d16;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        /* ✅ Custom Animations */
+        @keyframes blinkGlow {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+        }
+
+        .animate-blinkGlow {
+            animation: blinkGlow 3s infinite ease-in-out;
+        }
+
+        @keyframes driftGlow {
+
+            0%,
+            100% {
+                transform: translateY(0px) scale(1);
+            }
+
+            50% {
+                transform: translateY(-10px) scale(1.02);
+            }
+        }
+
+        .animate-driftGlow {
+            animation: driftGlow 6s infinite ease-in-out;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .animate-float {
+            animation: float 4s infinite ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="text-slate-100 antialiased">
+
+    <!-- ================= PRELOADER ================= -->
+    <div id="preloader" class="fixed inset-0 flex items-center justify-center bg-gray-700 z-[9999]">
+        <div class="relative flex items-center justify-center">
+            <!-- Avatar Icon -->
+            <div class="w-20 h-20 rounded-full overflow-hidden bg-red-500 flex items-center justify-center">
+                <!-- Replace this image with your avatar -->
+                <img src="../images/preloader.png" alt="Avatar" class="w-16 h-16 object-cover rounded-full" />
+            </div>
+
+            <!-- Ripple Circles -->
+            <span class="absolute w-28 h-28 border-4 border-green-400 rounded-full animate-ping delay-400"></span>
+        </div>
+    </div>
+    <!-- ============================================= -->
+
+    <!-- ===== HEADER ===== -->
+    <header class="fixed inset-x-0 top-0 z-50 bg-black/60 border-b border-white/10 backdrop-blur-md shadow-lg">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10 h-20 flex items-center justify-between">
+            <!-- Left: Logo + Name -->
+            <div class="flex items-center gap-3">
+                <div class="relative">
+                    <!-- soft flame behind logo -->
+                    <div
+                        class="pointer-events-none absolute -inset-2 rounded-xl blur-xl from-brand to-brand-2 opacity-70 animate-pulse">
+                    </div>
+                    <img src="../images/logo.png" alt="Logo"
+                        class="relative h-11 w-11 rounded-lg shadow-soft border border-white/20" />
+                </div>
+                <span class="font-extrabold text-lg tracking-wide text-white">Ashish's Portfolio</span>
+            </div>
+
+            <!-- Center: Navigation -->
+            <nav id="main-nav" class="hidden md:flex items-center gap-2 text-slate-300 font-semibold">
+                <!-- each link has nav-link class -->
+                <a href="#home" class="nav-link relative px-4 py-2 rounded-xl transition-all">Home</a>
+                <a href="#about" class="nav-link relative px-4 py-2 rounded-xl transition-all">About</a>
+                <a href="#skills" class="nav-link relative px-4 py-2 rounded-xl transition-all">Skills</a>
+                <a href="#academics" class="nav-link relative px-4 py-2 rounded-xl transition-all">Academic</a>
+                <a href="#certifications"
+                    class="nav-link relative px-4 py-2 rounded-xl transition-all">Certifications</a>
+                <a href="#projects" class="nav-link relative px-4 py-2 rounded-xl transition-all">Projects</a>
+                <a href="#contact" class="nav-link relative px-4 py-2 rounded-xl transition-all">Contact</a>
+            </nav>
+
+            <!-- Right: Resume -->
+            <!-- Right: Resume -->
+            <div class="flex items-center">
+                <a href="https://drive.google.com/file/d/1yWHlt0_reiZTJUpg8WELxII4JPw7ls9N/view?usp=sharing"
+                    target="_blank" class="px-5 py-2 rounded-xl border border-white text-white font-bold transition 
+            hover:bg-white hover:text-black hover:shadow-lg">
+                    Resume
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+
+
+
+    <!-- ===== HERO with COLORFUL BG ===== -->
+    <section id="home" class="relative min-h-[100vh] flex items-center pt-16 overflow-hidden"
+        class="relative min-h-[100vh] flex items-center pt-16 overflow-hidden bg-cover bg-center"
+        style="background-image: url('../images/5061807.jpg');">
+
+        <!-- dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+        <!-- Background image (colorful gradient) -->
+        <img src="" alt="Colorful Background" class="absolute inset-0 w-full h-full object-cover" />
+
+        <!-- dark overlay -->
+        <div class="absolute inset-0 bg-black/60"></div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 mx-auto max-w-7xl px-6 grid lg:grid-cols-2 gap-10 items-center">
+            <!-- Left Text -->
+            <div data-aos="fade-right" class="space-y-6">
+                <div class="mt-10">
+                    <p class="text-brand-2 font-semibold">Hello, I'm</p>
+
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                        Ashish Chavan<span id="rotating-text"
+                            class="block text-sm md:text-base text-brand-2 font-medium mt-2 opacity-100 transition-opacity duration-500 ease-out">
+                            Data Science Enthusiast
+                        </span>
+                    </h1>
+
+                    <p class="text-slate-300 max-w-2xl mx-auto mt-6 text-justify leading-relaxed tracking-wide">
+                        Pursuing an MCA in Artificial Intelligence & Machine Learning at Lovely Professional University,
+                        I am passionate about transforming complex data into actionable insights. With expertise in
+                        Python, SQL, and data visualization, I specialize in predictive modeling, statistical analysis,
+                        and machine learning to solve real-world challenges. My academic journey focuses on deep
+                        learning, natural language processing, and computer vision, while my vision is to build
+                        intelligent systems that drive innovation, empower businesses, and shape the future of
+                        AI-driven transformation.
+                    </p>
+
+                </div>
+
+                <script>
+
+                </script>
+
+
+                <div class="flex flex-wrap gap-3 items-center">
+                    <!-- Contact Me Button -->
+                    <a href="#contact"
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-black font-bold shadow-soft hover:scale-[1.02] transition">
+                        Contact Me </a>
+
+                    <!-- Icons Row -->
+                    <div class="flex items-center gap-3">
+                        <!-- LinkedIn -->
+                        <a href="http://www.linkedin.com/in/ashishchavan2003" target="_blank"
+                            class="w-11 h-11 flex items-center justify-center rounded-xl border border-white/20 hover:bg-white/10 transition"
+                            title="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="white" stroke-width="2">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-4 0v7h-4v-7a6 6 0 016-6z" />
+                                <rect width="4" height="12" x="2" y="9" />
+                                <circle cx="4" cy="4" r="2" />
+                            </svg>
+                        </a>
+
+                        <!-- GitHub -->
+                        <a href="https://github.com/ashishchavan1221" target="_blank"
+                            class="w-11 h-11 flex items-center justify-center rounded-xl border border-white/20 hover:bg-white/10 transition"
+                            title="GitHub">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="white" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M12 .5a12 12 0 00-3.79 23.4c.6.1.82-.26.82-.58v-2.04c-3.34.73-4.04-1.61-4.04-1.61-.55-1.4-1.34-1.77-1.34-1.77-1.09-.74.08-.72.08-.72 1.2.08 1.84 1.24 1.84 1.24 1.07 1.84 2.8 1.3 3.48.99.11-.77.42-1.3.76-1.6-2.67-.3-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.17 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 016 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.65.24 2.87.12 3.17.77.84 1.24 1.91 1.24 3.22 0 4.62-2.81 5.65-5.49 5.95.43.37.81 1.1.81 2.22v3.29c0 .32.22.68.82.58A12 12 0 0012 .5z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:ashishdchavan21@gmail.com"
+                            class="w-11 h-11 flex items-center justify-center rounded-xl border border-white/20 hover:bg-white/10 transition"
+                            title="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="white" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l9 6 9-6m-18 8h18V8H3v8z" />
+                            </svg>
+                        </a>
+
+                        <!-- Phone -->
+                        <a href="tel:+91 7769895939"
+                            class="w-11 h-11 flex items-center justify-center rounded-xl border border-white/20 hover:bg-white/10 transition"
+                            title="Call">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="white" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M3 5a2 2 0 012-2h3.28a2 2 0 011.94 1.45l1.1 4.39a2 2 0 01-.45 1.82l-2.2 2.2a16 16 0 006.4 6.4l2.2-2.2a2 2 0 011.82-.45l4.39 1.1A2 2 0 0121 19.72V21a2 2 0 01-2 2h-1C9.16 23 1 14.84 1 5V4a2 2 0 012-2z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Image with glowing flames + AI icons -->
+            <div data-aos="fade-left" class="flex justify-center relative">
+                <div class="relative">
+                    <!-- Multiple glowing flames with blink effect -->
+                    <div
+                        class="absolute -inset-12 rounded-full blur-3xl bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-500 opacity-70">
+                    </div>
+
+                    <div class="absolute -inset-12 rounded-[5rem] blur-3xl bg-pink-500/40 animate-driftGlow"></div>
+                    <!-- <div class="absolute -inset-16 rounded-[6rem] blur-3xl bg-indigo-400/30 animate-blinkGlow"></div> -->
+                    <!-- <div class="absolute -inset-20 rounded-[7rem] blur-3xl bg-cyan-400/30 animate-driftGlow"></div> -->
+                    <!-- <div class="absolute -inset-24 rounded-[8rem] blur-3xl bg-emerald-400/25 animate-blinkGlow"></div> -->
+
+                    <!-- Profile Image -->
+                    <img src="../images/myself.png" alt="Ashish Chavan"
+                        class="relative w-[26rem] h-[34rem] object-cover rounded-full shadow-soft border-4 border-white/20" />
+
+                    <!-- Floating Tech/AI Icons -->
+                    <img src="../images/react-2.svg" alt="React"
+                        class="absolute -top-12 -left-10 w-16 h-16 rounded-xl p-2 shadow-lg animate-float" />
+                    <img src="../images/mysql-logo.svg" alt="MySQL"
+                        class="absolute -top-6 -right-10 w-16 h-16 rounded-xl p-2 shadow-lg animate-driftGlow" />
+                    <img src="../images/python.svg" alt="Python"
+                        class="absolute top-1/3 -left-14 w-16 h-16 rounded-xl p-2 shadow-lg animate-blinkGlow" />
+                    <img src="../images/tensorflow.svg" alt="TensorFlow"
+                        class="absolute bottom-1/4 -right-14 w-16 h-16 rounded-xl p-2 shadow-lg animate-float" />
+                    <img src="../images/pytorch.svg" alt="PyTorch"
+                        class="absolute -bottom-10 left-1/4 w-16 h-16 rounded-xl p-2 shadow-lg animate-driftGlow" />
+                    <img src="../images/ai-brain.svg" alt="AI"
+                        class="absolute -bottom-12 -right-12 w-16 h-16 rounded-xl p-2 shadow-lg animate-blinkGlow" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================================================================== -->
+    <!-- ===== ABOUT ===== -->
+    <main>
+
+        <section id="about" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+            style="background-image: url('../images/5061807.jpg');">
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/90"></div>
+
+            <!-- Main Content -->
+            <div class="relative z-10 mx-auto max-w-4xl px-6 text-center space-y-10">
+
+                <!-- Animated Glow Frame -->
+                <div class="relative inline-block">
+                    <!-- <div
+                        class="absolute -inset-6 rounded-3xl blur-3xl bg-gradient-to-r from-cyan-400 via-pink-500 to-brand-2 opacity-70 animate-pulseGlow">
+                    </div> -->
+                    <h2
+                        class="text-5xl font-extrabold text-center mb-1 bg-gradient-to-r from-cyan-400 via-pink-400 to-brand-2 bg-clip-text text-transparent">
+                        About Me
+                    </h2>
+                </div>
+
+                <!-- Paragraphs -->
+                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn">
+                    🔥 I’m <span class="font-bold text-cyan-400">Ashish Chavan</span>, a passionate learner and aspiring
+                    <span class="text-brand-2 font-semibold">AI & Machine Learning Engineer</span>. My journey began in
+                    Pune,Maharashtra
+                    where my curiosity for technology evolved into a dedication to building innovative solutions that
+                    merge
+                    <span class="font-semibold">data, intelligence, and creativity</span>.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-200">
+                    💡 Currently pursuing an <span class="font-semibold">MCA in Artificial Intelligence & Machine
+                        Learning</span>
+                    at Lovely Professional University, I am strengthening my expertise in
+                    <span class="text-brand-2 font-semibold">deep learning, NLP, computer vision, and data
+                        science</span>.
+                    I thrive on exploring how AI can be applied to solve <span class="font-semibold">real-world
+                        challenges</span>
+                    across industries such as healthcare, business intelligence, and research.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-300">
+                    ⚡ My technical toolkit includes <span class="font-semibold">Python, C, C++, React.js, Node.js, SQL,
+                        MongoDB,
+                        TensorFlow, and PyTorch</span>. I am also well-versed in
+                    <span class="text-brand font-semibold">data visualization, problem-solving, and full-stack
+                        development</span>,
+                    giving me the ability to connect backend logic with intelligent AI models.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-500">
+                    🎶 Beyond academics, I am an <span class="text-brand font-semibold">Advanced Hindustani classical
+                        flute
+                        player</span>, where discipline, creativity, and expression shape my approach to both music and
+                    technology.
+                    This balance between logic and artistry defines who I am.
+                </p>
+
+                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-700">
+                    🚀 I have contributed to projects in <span class="font-semibold">AI-based text classification,
+                        sentiment
+                        analysis, computer vision, and predictive analytics</span>. My vision is to leverage
+                    <span class="text-brand-2 font-semibold">AI-driven innovation</span> to create impactful solutions
+                    that empower
+                    people, improve decision-making, and transform businesses.
+                </p>
+
+                <!-- Buttons -->
+                <!-- <div class="flex flex-wrap justify-center gap-4 mt-6">
+                    <a href="#skills"
+                        class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-black font-bold shadow-lg hover:scale-110 hover:shadow-2xl transition">
+                        🚀 Explore My Skills
+                    </a>
+                    <a href="#contact"
+                        class="px-6 py-3 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-black hover:scale-110 transition">
+                        📩 Get in Touch
+                    </a>
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Tailwind Custom Animations -->
+        <style>
+            @keyframes pulseGlow {
+
+                0%,
+                100% {
+                    opacity: 0.6;
+                    transform: scale(1);
+                }
+
+                50% {
+                    opacity: 1;
+                    transform: scale(1.05);
+                }
+            }
+
+            .animate-pulseGlow {
+                animation: pulseGlow 4s ease-in-out infinite;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .animate-fadeIn {
+                animation: fadeIn 1.2s ease forwards;
+            }
+
+            .delay-200 {
+                animation-delay: 0.2s;
+            }
+
+            .delay-300 {
+                animation-delay: 0.3s;
+            }
+
+            .delay-500 {
+                animation-delay: 0.5s;
+            }
+
+            .delay-700 {
+                animation-delay: 0.7s;
+            }
+        </style>
+    </main>
+
+
+    <!-- ====================================================================================================================== -->
+
+    <!-- ===== SKILLS ===== -->
+    <main class="">
+        <section id="skills"
+            class="relative min-h-[100vh] flex flex-col items-center justify-center py-20 bg-cover bg-center"
+            style="background-image: url('../images/5061807.jpg');">
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/90"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 max-w-6xl px-6 text-center">
+                <h2 class="text-5xl font-extrabold text-center mb-6  text-cyan-400">
+                    My Skills
+                </h2>
+
+                <p class="text-slate-300 max-w-3xl mx-auto mb-12">
+                    Continuously growing my technical expertise in software development and artificial intelligence.
+                    Focused on building impactful solutions by combining <span
+                        class="text-green-400">programming</span>,
+                    <span class="text-blue-400">data</span>, and <span class="text-yellow-400">AI</span>.
+                </p>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+
+                    <!-- Programming Languages -->
+                    <div>
+                        <h3 class="text-yellow-400 text-2xl font-bold mb-4">Programming Languages</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">Python</span>
+                            <span class="px-4 py-2 border-2 border-green-500 text-green-500 rounded-lg">C</span>
+                            <span class="px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg">C++</span>
+                            <span class="px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg">Java</span>
+
+                        </div>
+                    </div>
+
+                    <!-- Web Development -->
+                    <div>
+                        <h3 class="text-cyan-400 text-2xl font-bold mb-4">Web Development</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 border-2 border-green-500 text-green-500 rounded-lg">HTML</span>
+                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">CSS</span>
+                            <span
+                                class="px-4 py-2 border-2 border-purple-500 text-purple-500 rounded-lg">JavaScript</span>
+                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">React.js
+                            </span>
+                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">TailwindCSS</span>
+
+                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">Node.js</span>
+                        </div>
+                    </div>
+
+                    <!-- Databases -->
+                    <div>
+                        <h3 class="text-pink-400 text-2xl font-bold mb-4">Databases</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">MongoDB</span>
+                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">MySQL</span>
+                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">SQL</span>
+
+                        </div>
+                    </div>
+
+                    <!-- AI & Machine Learning -->
+                    <div>
+                        <h3 class="text-green-400 text-2xl font-bold mb-4">AI & Machine Learning</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span
+                                class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">TensorFlow</span>
+                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">PyTorch</span>
+                            <span class="px-4 py-2 border-2 border-purple-500 text-purple-500 rounded-lg">Data
+                                Visualization</span>
+                        </div>
+                    </div>
+
+                    <!-- Software Development & Tools -->
+                    <div>
+                        <h3 class="text-blue-300 text-2xl font-bold mb-4">Software Development & Tools</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">Git &
+                                GitHub</span>
+                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">VS Code</span>
+                            <span class="px-4 py-2 border-2 border-cyan-400 text-cyan-400 rounded-lg">Docker</span> <br>
+                            <span class="px-4 py-2 border-2 border-green-400 text-green-400 rounded-lg">Linux / Shell
+                                Scripting</span>
+                        </div>
+                    </div>
+
+                    <!-- Data Science & Analytics -->
+                    <div>
+                        <h3 class="text-purple-300 text-2xl font-bold mb-4">Data Science & Analytics</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">Pandas</span>
+                            <span class="px-4 py-2 border-2 border-green-400 text-green-400 rounded-lg">NumPy</span>
+                            <span
+                                class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">Scikit-Learn</span>
+                            <span class="px-4 py-2 border-2 border-red-400 text-red-400 rounded-lg">Matplotlib</span>
+                            <span class="px-4 py-2 border-2 border-pink-400 text-pink-400 rounded-lg">Seaborn</span>
+                            <span class="px-4 py-2 border-2 border-purple-400 text-purple-400 rounded-lg">Power BI /
+                                Tableau</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!--================================================================================================================== -->
+
+    <!-- ===== ACADEMICS ===== -->
+    <main class="">
+        <section id="academics" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+            style="background-image: url('../images/5061807.jpg');">
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/90"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 mx-auto max-w-5xl px-6">
+                <h2
+                    class="text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-pink-400 to-brand-2 bg-clip-text text-transparent">
+                    🎓 Academics
+                </h2>
+
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Vertical Line -->
+                    <span
+                        class="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400 via-white/20 to-transparent"></span>
+
+                    <div class="pl-12 space-y-10">
+
+                        <!-- MCA -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.2s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-blue-500 shadow-lg"></span>
+                            <h3 class="font-bold text-xl">MCA (AI & ML) – Lovely Professional University, Punjab</h3>
+                            <p class="text-slate-300">2025 – 2027 (Pursuing)</p>
+
+                            <!-- <a href="https://drive.google.com/file/d/mca-certificate-id/view?usp=sharing"
+                                target="_blank" class="inline-block mt-3 px-4 py-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 
+                     text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
+                     duration-300 hover:scale-110 animate-[flame_2s_infinite_alternate]">
+                                🔥 View Certificate
+                            </a> -->
+                        </div>
+
+                        <!-- BBA -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.4s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-cyan-400 shadow-lg"></span>
+                            <h3 class="font-bold text-xl">Bachelor of Computer Applications – Pratibha College, Pune
+                            </h3>
+
+                            <!-- Flexbox for Under SPPU + Button -->
+                            <div class="flex items-center justify-between mt-2">
+                                <p class="text-slate-300">Under Savitribai Phule Pune University(2021 - 2024)</p>
+                                <a href="https://drive.google.com/file/d/1MkqXaIBoUPSianzXudK5lXG1VKHsFj0t/view?usp=drive_link"
+                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
+             text-white font-semibold text-sm rounded-full shadow-lg 
+             transition-transform duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
+
+                        <!-- HSC -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.6s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-white shadow-lg"></span>
+                            <h3 class="font-bold text-xl mb-3">HSC – C.M.S. College, Pune</h3>
+
+                            <!-- Flex row: text left + button right -->
+                            <div class="flex items-center justify-between">
+                                <p class="text-slate-300">Commerce / IT Focus (2019 - 2021)</p>
+
+                                <a href="https://drive.google.com/file/d/1HG-mGJNeRWq93Lc2tNDDY1k8SAiwZctz/view?usp=drive_link"
+                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-green-500 via-teal-500 to-lime-500 
+                 text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
+                 duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
+
+
+                        <!-- SSC -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.8s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-pink-400 shadow-lg"></span>
+                            <h3 class="font-bold text-xl mb-3">SSC – Vidyanand Bhavan High School, Pune</h3>
+
+                            <!-- Flex row: text left + button right -->
+                            <div class="flex items-center justify-between">
+                                <p class="text-slate-300">10th Grade (complited - 2019)</p>
+
+                                <a href="https://drive.google.com/file/d/1sxUnDjanGaFVgiqMDLmYsD-FqNQEyuDV/view?usp=drive_link"
+                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 
+                 text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
+                 duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tailwind Flame Animation -->
+        <style>
+            @keyframes flame {
+                0% {
+                    transform: translateY(40px) scale(0.9);
+                    opacity: 0;
+                }
+
+                50% {
+                    transform: translateY(-5px) scale(1.05);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(0) scale(1);
+                    opacity: 0.95;
+                }
+            }
+        </style>
+    </main>
+
+    <!--certifications-->
+    <main class="">
+        <section id="certifications"
+            class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+            style="background-image: url('../images/5061807.jpg');">
+
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black/90"></div>
+
+            <div class="relative z-10 mx-auto max-w-7xl px-6 text-center">
+                <h2 class="text-5xl font-extrabold text-white mb-12">📜 Certifications</h2>
+
+                <!-- Carousel Container -->
+                <div class="relative">
+                    <!-- Wrapper with Scroll -->
+                    <div id="certifications-wrapper"
+                        class="flex gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar">
+
+                        <!-- ==== CARD 1 ==== -->
+                        <div class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800
+    min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl
+    hover:scale-105 transition duration-500">
+                            <img src="../images/data science.png" alt="Data Science Certification"
+                                class="w-full h-44 object-contain rounded-xl mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Data Science Certification
+                            </h3>
+
+                            <p class="text-slate-300 mt-2 text-lg">
+                                <span class="font-semibold">Institution:</span> ExcelR, Bengaluru, India
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Date Earned:</span> 20 November 2024
+                            </p>
+
+                            <p class="text-slate-400 text-sm mt-1 leading-relaxed">
+                                Awarded after successful completion of ExcelR's intensive data science program
+                                with <span class="italic">distinction</span>, covering end-to-end concepts from
+                                <span class="text-brand-2 font-medium">Python programming, Statistics, Machine Learning,
+                                    Deep Learning, SQL</span>,
+                                and <span class="text-brand-2 font-medium">Data Visualization</span> to model
+                                deployment.
+                            </p>
+
+                            <ul class="text-slate-400 text-sm mt-3 list-disc pl-5 space-y-1">
+                                <li>Hands-on projects with real-world datasets</li>
+                                <li>Model building, evaluation, and optimization</li>
+                                <li>End-to-end deployment & presentation skills</li>
+                            </ul>
+
+                            <p class="text-slate-400 text-sm mt-2">
+                                <span class="font-semibold">Certificate ID:</span> 18606/EXCELR/20112024
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1azG3AK4QP6UswLY5qavHB8DKOt9QL4I7/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+                        <!-- ==== CARD 2 ==== -->
+                        <div class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800
+    min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl
+    hover:scale-105 transition duration-500">
+                            <img src="../images/AI certification.png" alt="Artificial Intelligence Certification"
+                                class="w-full h-44 object-contain rounded-xl mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Artificial Intelligence Certification
+                            </h3>
+
+                            <p class="text-slate-300 text-lg">
+                                <span class="font-semibold">Institution:</span> ExcelR, Bengaluru, India
+                            </p>
+
+                            <p class="text-slate-300 text-lg">
+                                <span class="font-semibold">Date Earned:</span> 25 March 2025
+                            </p>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Successfully completed ExcelR’s advanced AI program with <span
+                                    class="italic">distinction</span>,
+                                covering <span class="text-brand-2 font-medium">Machine Learning, Deep Learning, Neural
+                                    Networks, NLP, and Computer Vision</span>.
+                                Gained expertise in building intelligent automation systems and AI-driven solutions.
+                            </p>
+
+                            <ul class="text-slate-400 text-sm  list-disc pl-5 space-y-1">
+                                <li>Developed end-to-end ML & DL pipelines</li>
+                                <li>Worked on real-world NLP & CV projects</li>
+                                <li>Explored model deployment and AI ethics</li>
+                            </ul>
+
+                            <p class="text-slate-400 text-sm ">
+                                <span class="font-semibold">Certificate ID:</span> 10166/EXCELR/25032025
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1RieMbXBgSG8BqayYNGJl3zXZcfv8GsFb/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+                        <!-- ==== CARD 3 ==== -->
+                        <div
+                            class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500">
+                            <img src="../images/Data sci Intern.png" alt="Data Science Internship Certificate"
+                                class="w-full h-44 object-contain rounded-xl mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Data Science Internship
+                            </h3>
+
+                            <p class="text-slate-300 text-lg">
+                                <span class="font-semibold">Organization:</span> Ai Variant, Bengaluru
+                            </p>
+
+                            <p class="text-slate-300  text-lg">
+                                <span class="font-semibold">Duration:</span> 29 Sep 2024 – 30 Dec 2024
+                            </p>
+
+                            <p class="text-slate-300  text-lg">
+                                <span class="font-semibold">Issued:</span> 31 Dec 2024
+                            </p>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Successfully completed a 3-month internship focusing on
+                                <span class="text-brand-2 font-medium">EDA, Machine Learning, Deep Learning, and Model
+                                    Deployment</span>.
+                                Worked on real-world datasets and implemented predictive solutions.
+                            </p>
+
+                            <ul class="text-slate-400 text-sm mt-3 list-disc pl-5 space-y-1">
+                                <li>Performed data cleaning, feature engineering, and visualization</li>
+                                <li>Built ML & DL models and optimized their performance</li>
+                                <li>Deployed models for real-time inference</li>
+                            </ul>
+
+                            <p class="text-slate-400  text-sm ">
+                                <span class="font-semibold">Certificate ID:</span> AIV/23-24/Q4/12/16397
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1hit8DUG6z-GzDfuGjCB84CjAHW-2-NlE/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+                        <!-- ==== CARD 4 ==== -->
+                        <div
+                            class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500">
+                            <img src="../images/datascience_master.png" alt="Master in Data Science"
+                                class="w-full h-40 object-contain rounded-lg mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Master in Data Science Certification
+                            </h3>
+
+                            <p class="text-slate-300  text-lg">
+                                <span class="font-semibold">Institution:</span>
+                                <span class="text-slate-400">NaSSCom / Futureskill</span>
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Candidate:</span>
+                                <span class="text-slate-400">Chavan Ashish Dinesh</span>
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Duration:</span>
+                                <span class="text-slate-400">6 Months</span> |
+                                <span class="font-semibold">Completion:</span>
+                                <span class="text-slate-400">2024</span>
+                            </p>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Successfully completed the <span class="text-brand-2 font-medium">Master in Data Science
+                                    program</span>,
+                                covering <span class="text-brand-2 font-medium">Python programming, Machine Learning,
+                                    Deep Learning,
+                                    Natural Language Processing (NLP), Computer Vision (CV),</span> and <span
+                                    class="text-brand-2 font-medium">Big Data Analytics</span>.
+                                Hands-on training included building <span class="text-brand-2 font-medium">real-world
+                                    projects</span> in AI/ML.
+                            </p>
+
+                            <p class="text-slate-400 text-sm ">
+                                <span class="font-semibold">Skills:</span>
+                                Python, SQL, TensorFlow, PyTorch, Scikit-learn, Data Visualization, Deployment
+                            </p>
+
+                            <p class="text-slate-400 text-xs  italic">
+                                *Certificate verified and awarded upon successful completion of the program
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1S0lyxvsBZuUX8EYj8JtGPKJIVeSF0IEV/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+                        <!-- ==== CARD 5 ==== -->
+
+                        <div class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800
+    min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl
+    hover:scale-105 transition duration-500">
+                            <img src="../images/AI_intern.png" alt="AI Internship"
+                                class="w-full h-44 object-contain rounded-xl mb-4 border border-slate-700 shadow-md">
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">AI Internship</h3>
+
+                            <p class="text-slate-300  text-lg"><span class="font-semibold">Organization:</span> Ai
+                                Variant,
+                                Bengaluru</p>
+                            <p class="text-slate-300  text-lg"><span class="font-semibold">Duration:</span> 13 Feb
+                                2025 – 16 May 2025</p>
+                            <p class="text-slate-300  text-lg"><span class="font-semibold">Issued:</span> 17 May
+                                2025</p>
+                            <p class="text-slate-400 text-sm  mt-3 leading-relaxed">
+                                Successfully completed an <span class="text-brand-2 font-medium">AI internship</span>
+                                focused on
+                                <span class="text-brand-2 font-medium">Natural Language Processing (NLP), Computer
+                                    Vision (CV),
+                                    Deep Learning (DL), and Deployment</span>.
+                                Worked on <span class="text-brand-2 font-medium">real-world AI pipelines</span>,
+                                optimizing models, and deploying solutions for production environments.
+                            </p>
+                            <p class="text-slate-400 mt-3 text-sm ">
+                                <span class="font-semibold">Tools:</span> Python, PyTorch, TensorFlow, Hugging Face,
+                                GitHub, Docker
+                            </p>
+                            <p class="text-slate-400 text-sm "><span class="font-semibold">Code:</span>
+                                AIV/24-25/Q2/05/1043</p>
+
+                            <a href="https://drive.google.com/file/d/15LImUtk4foGWxehjlmd4JS1gytZlbLnL/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+                        <!-- ==== CARD 6 ==== -->
+                        <div
+                            class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500">
+                            <img src="../images/cait.png" alt="CAIT Certification"
+                                class="w-full h-40 object-contain rounded-lg mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Certificate Course in Information Technology
+                            </h3>
+
+                            <p class="text-slate-300 mt-2 text-lg">
+                                <span class="font-semibold">Institution:</span>
+                                Center for Advanced Information Technologies <br>
+                                <span class="text-slate-400 text-sm">(CAIT Edusys Pvt. Ltd.)</span>
+                            </p>
+
+                            <p class="text-slate-300 text-lg">
+                                <span class="font-semibold">Reg. No.:</span>
+                                <span class="text-slate-400">150076</span>
+                            </p>
+
+                            <p class="text-slate-300 text-lg">
+                                <span class="font-semibold">Duration:</span>
+                                <span class="text-slate-400">3 Months</span> |
+                                <span class="font-semibold">Grade:</span>
+                                <span class="text-slate-400">A</span>
+                            </p>
+
+                            <p class="text-slate-400 text-sm leading-relaxed">
+                                Successfully completed the <span class="text-brand-2 font-medium">Certificate Course in
+                                    Information Technology</span>,
+                                covering fundamentals of <span class="text-brand-2 font-medium">IT and computer
+                                    applications</span>, and passed
+                                the final exam with distinction.
+                            </p>
+
+                            <p class="text-slate-400 text-sm mt-2">
+                                <span class="font-semibold">Issued:</span>
+                                <span class="text-slate-400">Aug 2019</span>
+                            </p>
+
+                            <p class="text-slate-400 text-xs italic">
+                                *Certificate verified via <span class="text-brand-2 font-medium">CAIT portal</span> |
+                                ISO 9001:2008 Certified Company
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1fyWUkiIZ8Fa408r1PHsQNzb4I_xQ2xus/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                Verify Certificate
+                            </a>
+                        </div>
+
+
+
+                        <!-- ==== CARD 7 ==== -->
+                        <div
+                            class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500">
+                            <img src="../images/tally.png" alt="Tally Prime + GST"
+                                class="w-full h-40 object-contain rounded-lg mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Tally Prime + GST Certification
+                            </h3>
+
+                            <p class="text-slate-300  text-lg">
+                                <span class="font-semibold">Institution:</span>
+                                Yash Computer & Hardware Training Institute
+                                <span class="text-slate-400 text-sm">(ISO 9001:2015 Certified)</span>
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Score:</span>
+                                <span class="text-slate-400">80%</span> |
+                                <span class="font-semibold">Result:</span>
+                                <span class="text-slate-400">Pass</span>
+                            </p>
+
+                            <p class="text-slate-400 text-sm  leading-relaxed">
+                                Successfully completed the <span class="text-brand-2 font-medium">Tally Prime + GST
+                                    certification course</span>
+                                (<span class="text-slate-400">2 months, 48 hours</span>), gaining hands-on experience in
+                                <span class="text-brand-2 font-medium">accounting, GST compliance,</span> and
+                                <span class="text-brand-2 font-medium">business financial management</span>.
+                                The training also covered <span class="text-brand-2 font-medium">voucher management,
+                                    and taxation modules</span> for real-world applications.
+                            </p>
+
+                            <p class="text-slate-400 text-sm">
+                                <span class="font-semibold">Skills:</span>
+                                Tally Prime, GST Filing, Payroll, Taxation
+                            </p>
+
+                            <p class="text-slate-400 text-sm ">
+                                <span class="font-semibold">Issued:</span>
+                                <span class="text-slate-400">Dec 2021</span>
+                            </p>
+
+                            <p class="text-slate-400 text-xs  italic">
+                                *Certificate issued by <span class="text-brand-2 font-medium">YCHTI</span> | Verified &
+                                ISO Certified
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/16c5ofGFjGstqR7aekWuHSk5J-zqzuyzN/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+
+                        <!-- ==== CARD 8 ==== -->
+                        <div
+                            class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[350px] max-w-[380px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500">
+                            <img src="../images/drawing.png" alt="Elementary Drawing Exam"
+                                class="w-full h-40 object-contain rounded-lg mb-4 border border-slate-700 shadow-md">
+
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">
+                                Elementary Grade Drawing Examination
+                            </h3>
+
+                            <p class="text-slate-300 mt-2 text-lg">
+                                <span class="font-semibold">Institution:</span>
+                                Government of Maharashtra – <span class="text-slate-400">Art Examination
+                                    Committee</span>
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Candidate:</span>
+                                <span class="text-slate-400">Chavan Ashish Dinesh</span>
+                            </p>
+
+                            <p class="text-slate-300 mt-1 text-lg">
+                                <span class="font-semibold">Year:</span>
+                                <span class="text-slate-400">2018</span> |
+                                <span class="font-semibold">Grade:</span>
+                                <span class="text-slate-400">B</span>
+                            </p>
+
+                            <p class="text-slate-400 text-sm mt-4 leading-relaxed">
+                                Successfully passed the <span class="text-brand-2 font-medium">Elementary Grade Drawing
+                                    Examination</span>
+                                during <span class="text-slate-400">10th grade</span>, demonstrating strong fundamentals
+                                in
+                                <span class="text-brand-2 font-medium">free-hand drawing</span> and
+                                <span class="text-brand-2 font-medium">creative skills</span>.
+                            </p>
+
+                            <p class="text-slate-400 text-xs mt-2 italic">
+                                Certified by the <span class="text-brand-2 font-medium">Director of Art & Chairman,
+                                    Maharashtra State</span>
+                            </p>
+
+                            <a href="https://drive.google.com/file/d/1hDuk0L5hFtkjk6_JCMuT3Zeo56nUG4-J/view?usp=drive_link"
+                                target="_blank"
+                                class="mt-5 inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:scale-105 hover:shadow-xl transition">
+                                View Certificate
+                            </a>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <!-- Arrows -->
+                    <button id="prev"
+                        class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-lg text-white p-3 rounded-full shadow-lg hover:bg-brand-2 hover:scale-110 transition border border-white/20">
+                        &#10094;
+                    </button>
+                    <button id="next"
+                        class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-lg text-white p-3 rounded-full shadow-lg hover:bg-brand-2 hover:scale-110 transition border border-white/20">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const wrapper = document.getElementById("certifications-wrapper");
+            const scrollAmount = 380; // one card scroll width
+
+            document.getElementById("next").addEventListener("click", () => {
+                wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            });
+            document.getElementById("prev").addEventListener("click", () => {
+                wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            });
+        </script>
+
+        <style>
+            /* Hide default scrollbar */
+            .hide-scrollbar::-webkit-scrollbar {
+                display: none;
+            }
+
+            .hide-scrollbar {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+        </style>
+    </main>
+
+    <!--=====PROJECTS=====-->
+    <section id="projects" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+        style="background-image: url('../images/5061807.jpg');">
+        <div class="absolute inset-0 bg-black/90"></div>
+
+        <div class="relative z-10 mx-auto max-w-6xl px-6 text-center">
+            <h2 class="text-5xl font-extrabold text-white mb-12">💻 Projects</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Project Card -->
+                <div
+                    class="glass p-8 rounded-3xl shadow-lg text-left hover:rotate-2 hover:scale-105 transition duration-500 animate-rotate">
+                    <h3 class="text-2xl font-bold text-brand mb-3">Sentiment Analysis on IMDB</h3>
+                    <p class="text-slate-300">Built using BERT and RoBERTa models for classifying movie reviews
+                        as
+                        positive or negative.</p>
+                </div>
+
+                <div
+                    class="glass p-8 rounded-3xl shadow-lg text-left hover:-rotate-2 hover:scale-105 transition duration-500 animate-rotate">
+                    <h3 class="text-2xl font-bold text-brand mb-3">AI-Powered Resume Parser</h3>
+                    <p class="text-slate-300">Extracts structured information from resumes using NLP and
+                        presents
+                        insights visually.</p>
+                </div>
+
+                <div
+                    class="glass p-8 rounded-3xl shadow-lg text-left hover:rotate-3 hover:scale-105 transition duration-500 animate-rotate">
+                    <h3 class="text-2xl font-bold text-brand mb-3">Computer Vision Attendance System</h3>
+                    <p class="text-slate-300">Face recognition–based system to automate attendance with high
+                        accuracy.
+                    </p>
+                </div>
+
+                <div
+                    class="glass p-8 rounded-3xl shadow-lg text-left hover:-rotate-3 hover:scale-105 transition duration-500 animate-rotate">
+                    <h3 class="text-2xl font-bold text-brand mb-3">Flute Notes Generator</h3>
+                    <p class="text-slate-300">An AI tool that converts text into music notes for Hindustani
+                        classical
+                        flute learners.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== 3 CONTACT ===== -->
+    <section id="contact" class="py-20">
+        <div class="mx-auto max-w-4xl px-6">
+            <h2 class="text-3xl font-extrabold text-center mb-10">Contact Me</h2>
+            <form id="contactForm" class="glass rounded-3xl p-8 space-y-4" data-aos="fade-up" novalidate>
+                <input type="text" name="name" placeholder="Your Name"
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
+                    required />
+                <input type="email" name="email" placeholder="Your Email"
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
+                    required />
+                <textarea name="message" rows="5" placeholder="Your Message"
+                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
+                    required></textarea>
+                <button
+                    class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold hover:scale-[1.02] transition">
+                    Send
+                </button>
+                <p id="formStatus" class="text-sm text-slate-300"></p>
+            </form>
+        </div>
+    </section>
+
+
+
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-white/10 bg-black/60">
+        <div class="mx-auto max-w-7xl px-6 py-6 text-center text-slate-300">
+            © <span id="year"></span> Ashish Chavan. All rights reserved.
+        </div>
+    </footer>
+    <!-- AOS + Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </section>
+
+    <!-- Floating WhatsApp + Back to Top -->
+    <div id="floating-buttons" class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/7769895939" target="_blank"
+            class="w-14 h-14 flex items-center justify-center rounded-full bg-green-500 shadow-lg hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-7 h-7">
+                <path
+                    d="M20.52 3.48A11.82 11.82 0 0012 .25C5.64.25.5 5.39.5 11.77c0 2.08.55 4.12 1.6 5.92L.5 23.75l6.28-1.65a11.74 11.74 0 005.22 1.25h.01c6.38 0 11.52-5.14 11.52-11.52 0-3.08-1.2-5.97-3.01-8.1zM12 21.2a9.4 9.4 0 01-4.8-1.3l-.35-.2-3.73.98 1-3.63-.24-.37A9.4 9.4 0 012.6 11.8c0-5.16 4.2-9.36 9.36-9.36 2.5 0 4.84.97 6.6 2.73a9.29 9.29 0 012.75 6.63c0 5.16-4.2 9.36-9.36 9.36zm5.11-7.05c-.28-.14-1.63-.8-1.88-.9-.25-.09-.43-.14-.6.14-.17.28-.69.9-.85 1.09-.16.18-.31.2-.59.07-.28-.14-1.18-.43-2.25-1.37-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.46.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.82-1.99-.22-.53-.44-.46-.6-.46h-.51c-.18 0-.48.07-.73.34-.25.28-.95.93-.95 2.27s.98 2.64 1.12 2.82c.14.18 1.93 2.95 4.67 4.14.65.28 1.16.45 1.55.58.65.2 1.25.17 1.72.1.53-.08 1.63-.67 1.86-1.32.23-.65.23-1.2.16-1.32-.07-.11-.25-.18-.53-.32z" />
+            </svg>
+        </a>
+
+        <!-- Back to Top Button -->
+        <button id="backToTop"
+            class="hidden w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-brand to-brand-2 text-black shadow-lg hover:scale-110 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
