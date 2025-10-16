@@ -132,7 +132,6 @@
 
             <!-- Center: Navigation -->
             <nav id="main-nav" class="hidden md:flex items-center gap-2 text-slate-300 font-semibold">
-                <!-- each link has nav-link class -->
                 <a href="#home" class="nav-link relative px-4 py-2 rounded-xl transition-all">Home</a>
                 <a href="#about" class="nav-link relative px-4 py-2 rounded-xl transition-all">About</a>
                 <a href="#skills" class="nav-link relative px-4 py-2 rounded-xl transition-all">Skills</a>
@@ -144,17 +143,95 @@
             </nav>
 
             <!-- Right: Resume -->
-            <!-- Right: Resume -->
             <div class="flex items-center">
                 <a href="https://drive.google.com/file/d/1yWHlt0_reiZTJUpg8WELxII4JPw7ls9N/view?usp=sharing"
-                    target="_blank" class="px-5 py-2 rounded-xl border border-white text-white font-bold transition 
-            hover:bg-white hover:text-black hover:shadow-lg">
+                    target="_blank"
+                    class="px-5 py-2 rounded-xl border border-white text-white font-bold transition hover:bg-white hover:text-black hover:shadow-lg">
                     Resume
                 </a>
             </div>
 
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-white text-3xl focus:outline-none">
+                ☰
+            </button>
         </div>
     </header>
+
+    <!-- ===== STYLES ===== -->
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        /* Hide navigation by default on mobile */
+        #main-nav {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            background: rgba(0, 0, 0, 0.95);
+            position: absolute;
+            top: 5rem;
+            left: 0;
+            width: 100%;
+            padding: 1rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            z-index: 40;
+        }
+
+        /* Show nav on medium screens */
+        @media (min-width: 768px) {
+            #main-nav {
+                display: flex !important;
+                position: static !important;
+                background: none !important;
+                width: auto !important;
+                flex-direction: row !important;
+                padding: 0 !important;
+            }
+        }
+
+        /* Mobile nav links */
+        #main-nav a {
+            display: block;
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+        }
+
+        /* Show nav when header has mobile-nav-open */
+        .mobile-nav-open #main-nav {
+            display: flex;
+        }
+    </style>
+
+    <!-- ===== SCRIPT ===== -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const header = document.querySelector("header");
+
+        // Toggle mobile menu on button click
+        menuBtn.addEventListener("click", () => {
+            header.classList.toggle("mobile-nav-open");
+        });
+
+        // Close mobile menu and smooth scroll when clicking any nav link
+        document.querySelectorAll("#main-nav a").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault(); // prevent default jump
+                const targetId = this.getAttribute("href").substring(1); // get section id
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: "smooth" }); // smooth scroll
+                }
+                // Close mobile menu
+                header.classList.remove("mobile-nav-open");
+            });
+        });
+    </script>
+
+
 
 
 
@@ -1132,46 +1209,114 @@
         style="background-image: url('../images/5061807.jpg');">
         <div class="absolute inset-0 bg-black/90"></div>
 
-        <div class="relative z-10 mx-auto max-w-6xl px-6 text-center">
+        <div class="relative z-10 mx-auto max-w-7xl w-full px-6 text-center">
             <h2 class="text-5xl font-extrabold text-white mb-12">💻 Projects</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <!-- Project Card -->
-                <div
-                    class="glass p-8 rounded-3xl shadow-lg text-left hover:rotate-2 hover:scale-105 transition duration-500 animate-rotate">
-                    <h3 class="text-2xl font-bold text-brand mb-3">Sentiment Analysis on IMDB</h3>
-                    <p class="text-slate-300">Built using BERT and RoBERTa models for classifying movie reviews
-                        as
-                        positive or negative.</p>
+            <div class="relative">
+                <div id="projects-wrapper" class="flex gap-6 overflow-x-auto scroll-smooth pb-6 hide-scrollbar">
+
+                    <div
+                        class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[340px] max-w-[360px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500 text-left flex flex-col">
+                        <img src="../images/imdb.png" alt="Sentiment Analysis Project"
+                            class="w-full h-44 object-cover rounded-xl mb-4 border border-slate-700 shadow-md">
+                        <div class="flex-grow">
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">Sentiment Analysis on IMDB
+                            </h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                                Built and compared deep learning models (<span class="font-semibold text-cyan-400">BERT
+                                    & RoBERTa</span>) to classify movie reviews from the IMDB dataset as positive or
+                                negative with high accuracy.
+                            </p>
+                        </div>
+                        <a href="https://github.com/ashishchavan1221" target="_blank"
+                            class="mt-5 self-start inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition">View
+                            on GitHub</a>
+                    </div>
+
+                    <div
+                        class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[340px] max-w-[360px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500 text-left flex flex-col">
+                        <img src="../images/resume.png" alt="AI-Powered Resume Parser Project"
+                            class="w-full h-44 object-cover rounded-xl mb-4 border border-slate-700 shadow-md">
+                        <div class="flex-grow">
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">AI-Powered Resume Parser</h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                                Developed an NLP-based tool using <span class="font-semibold text-cyan-400">spaCy and
+                                    Transformers</span> to automatically extract key information like skills,
+                                experience, and contact details from resumes.
+                            </p>
+                        </div>
+                        <a href="https://github.com/ashishchavan1221" target="_blank"
+                            class="mt-5 self-start inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition">View
+                            on GitHub</a>
+                    </div>
+
+                    <div
+                        class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[340px] max-w-[360px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500 text-left flex flex-col">
+                        <img src="../images/attendance.png" alt="Computer Vision Attendance System"
+                            class="w-full h-44 object-cover rounded-xl mb-4 border border-slate-700 shadow-md">
+                        <div class="flex-grow">
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">CV Attendance System</h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                                Created a real-time attendance system using <span
+                                    class="font-semibold text-cyan-400">OpenCV and facial recognition</span> libraries
+                                to automate and track presence in a classroom environment.
+                            </p>
+                        </div>
+                        <a href="https://github.com/ashishchavan1221" target="_blank"
+                            class="mt-5 self-start inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition">View
+                            on GitHub</a>
+                    </div>
+
+                    <div
+                        class="glass p-6 rounded-2xl shadow-lg bg-gradient-to-br from-slate-900 to-slate-800 min-w-[340px] max-w-[360px] flex-shrink-0 border border-transparent hover:shadow-2xl hover:scale-105 transition duration-500 text-left flex flex-col">
+                        <img src="../images/flute.png" alt="Flute Notes Generator Project"
+                            class="w-full h-44 object-cover rounded-xl mb-4 border border-slate-700 shadow-md">
+                        <div class="flex-grow">
+                            <h3 class="font-extrabold text-2xl text-brand tracking-tight">Flute Notes Generator</h3>
+                            <p class="text-slate-400 text-sm mt-3 leading-relaxed">
+                                A unique AI tool that leverages <span class="font-semibold text-cyan-400">MIDI and Music
+                                    Transformers</span> to convert text or simple melodies into playable notes for
+                                Hindustani classical flute.
+                            </p>
+                        </div>
+                        <a href="https://github.com/ashishchavan1221" target="_blank"
+                            class="mt-5 self-start inline-block bg-brand-2 text-white px-5 py-2.5 rounded-xl shadow-lg hover:shadow-xl transition">View
+                            on GitHub</a>
+                    </div>
+
                 </div>
 
-                <div
-                    class="glass p-8 rounded-3xl shadow-lg text-left hover:-rotate-2 hover:scale-105 transition duration-500 animate-rotate">
-                    <h3 class="text-2xl font-bold text-brand mb-3">AI-Powered Resume Parser</h3>
-                    <p class="text-slate-300">Extracts structured information from resumes using NLP and
-                        presents
-                        insights visually.</p>
-                </div>
-
-                <div
-                    class="glass p-8 rounded-3xl shadow-lg text-left hover:rotate-3 hover:scale-105 transition duration-500 animate-rotate">
-                    <h3 class="text-2xl font-bold text-brand mb-3">Computer Vision Attendance System</h3>
-                    <p class="text-slate-300">Face recognition–based system to automate attendance with high
-                        accuracy.
-                    </p>
-                </div>
-
-                <div
-                    class="glass p-8 rounded-3xl shadow-lg text-left hover:-rotate-3 hover:scale-105 transition duration-500 animate-rotate">
-                    <h3 class="text-2xl font-bold text-brand mb-3">Flute Notes Generator</h3>
-                    <p class="text-slate-300">An AI tool that converts text into music notes for Hindustani
-                        classical
-                        flute learners.</p>
-                </div>
+                <button id="project-prev"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-lg text-white p-3 rounded-full shadow-lg hover:bg-brand-2 hover:scale-110 transition border border-white/20 hidden sm:block">
+                    &#10094;
+                </button>
+                <button id="project-next"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-lg text-white p-3 rounded-full shadow-lg hover:bg-brand-2 hover:scale-110 transition border border-white/20 hidden sm:block">
+                    &#10095;
+                </button>
             </div>
         </div>
-    </section>
 
+        <script>
+            // Note: It's better to place scripts at the end of the <body>,
+            // but this works for a self-contained component.
+            const projectsWrapper = document.getElementById("projects-wrapper");
+            const projectNextBtn = document.getElementById("project-next");
+            const projectPrevBtn = document.getElementById("project-prev");
+
+            if (projectsWrapper && projectNextBtn && projectPrevBtn) {
+                const projectScrollAmount = 360; // Width of one card + gap
+
+                projectNextBtn.addEventListener("click", () => {
+                    projectsWrapper.scrollBy({ left: projectScrollAmount, behavior: 'smooth' });
+                });
+
+                projectPrevBtn.addEventListener("click", () => {
+                    projectsWrapper.scrollBy({ left: -projectScrollAmount, behavior: 'smooth' });
+                });
+            }
+        </script>
+    </section>
 
     <!-- ===== 3 CONTACT ===== -->
     <section id="contact" class="py-20">
@@ -1195,9 +1340,6 @@
             </form>
         </div>
     </section>
-
-
-
 
     <!-- ===== FOOTER ===== -->
     <footer class="border-t border-white/10 bg-black/60">
