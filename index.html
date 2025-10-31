@@ -135,10 +135,10 @@
                 <a href="#home" class="nav-link relative px-4 py-2 rounded-xl transition-all">Home</a>
                 <a href="#about" class="nav-link relative px-4 py-2 rounded-xl transition-all">About</a>
                 <a href="#skills" class="nav-link relative px-4 py-2 rounded-xl transition-all">Skills</a>
-                <a href="#academics" class="nav-link relative px-4 py-2 rounded-xl transition-all">Academic</a>
                 <a href="#certifications"
                     class="nav-link relative px-4 py-2 rounded-xl transition-all">Certifications</a>
                 <a href="#projects" class="nav-link relative px-4 py-2 rounded-xl transition-all">Projects</a>
+                <a href="#academics" class="nav-link relative px-4 py-2 rounded-xl transition-all">Academic</a>
                 <a href="#contact" class="nav-link relative px-4 py-2 rounded-xl transition-all">Contact</a>
             </nav>
 
@@ -206,36 +206,6 @@
         }
     </style>
 
-    <!-- ===== SCRIPT ===== -->
-    <script>
-        const menuBtn = document.getElementById("menu-btn");
-        const header = document.querySelector("header");
-
-        // Toggle mobile menu on button click
-        menuBtn.addEventListener("click", () => {
-            header.classList.toggle("mobile-nav-open");
-        });
-
-        // Close mobile menu and smooth scroll when clicking any nav link
-        document.querySelectorAll("#main-nav a").forEach(link => {
-            link.addEventListener("click", function (e) {
-                e.preventDefault(); // prevent default jump
-                const targetId = this.getAttribute("href").substring(1); // get section id
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.scrollIntoView({ behavior: "smooth" }); // smooth scroll
-                }
-                // Close mobile menu
-                header.classList.remove("mobile-nav-open");
-            });
-        });
-    </script>
-
-
-
-
-
-
     <!-- ===== HERO with COLORFUL BG ===== -->
     <section id="home" class="relative min-h-[100vh] flex items-center pt-16 overflow-hidden"
         class="relative min-h-[100vh] flex items-center pt-16 overflow-hidden bg-cover bg-center"
@@ -266,12 +236,11 @@
                     <p class="text-slate-300 max-w-2xl mx-auto mt-6 text-justify leading-relaxed tracking-wide">
                         Pursuing an MCA in Artificial Intelligence & Machine Learning at Lovely Professional University,
                         I am passionate about transforming complex data into actionable insights. With expertise in
-                        Python, SQL, and data visualization, I specialize in predictive modeling, statistical analysis,
+                        Python, SQL, and data visualization, I enjoy learning predictive modeling, statistical analysis,
                         and machine learning to solve real-world challenges. My academic journey focuses on deep
-                        learning, natural language processing, and computer vision, while my vision is to build
-                        intelligent systems that drive innovation, empower businesses, and shape the future of
-                        AI-driven transformation.
-                    </p>
+                        learning, natural language processing, and computer vision, and my vision is to build
+                        intelligent systems that drive innovation, empower businesses, and shape the future of AI-driven
+                        transformation. </p>
 
                 </div>
 
@@ -337,37 +306,39 @@
             </div>
 
             <!-- Right Image with glowing flames + AI icons -->
-            <div data-aos="fade-left" class="flex justify-center relative">
-                <div class="relative">
-                    <!-- Multiple glowing flames with blink effect -->
+            <div data-aos="fade-left" class="flex justify-center relative p-10">
+
+                <div class="relative w-[26rem] h-[34rem]">
+
+                    <!-- Glowing Box Background -->
                     <div
-                        class="absolute -inset-12 rounded-full blur-3xl bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-500 opacity-70">
+                        class="absolute inset-0 rounded-3xl blur-3xl bg-gradient-to-r from-cyan-400 via-blue-400 to-sky-500 opacity-70 animate-driftGlow">
                     </div>
+                    <div class="absolute inset-0 rounded-3xl blur-2xl bg-pink-500/40 animate-blinkGlow"></div>
+                    <div class="absolute inset-0 rounded-3xl border-4 border-white/20"></div>
 
-                    <div class="absolute -inset-12 rounded-[5rem] blur-3xl bg-pink-500/40 animate-driftGlow"></div>
-                    <!-- <div class="absolute -inset-16 rounded-[6rem] blur-3xl bg-indigo-400/30 animate-blinkGlow"></div> -->
-                    <!-- <div class="absolute -inset-20 rounded-[7rem] blur-3xl bg-cyan-400/30 animate-driftGlow"></div> -->
-                    <!-- <div class="absolute -inset-24 rounded-[8rem] blur-3xl bg-emerald-400/25 animate-blinkGlow"></div> -->
+                    <!-- Profile Image inside Box -->
+                    <img src="../images/ashishimg.jpg" alt="Ashish Chavan"
+                        class="relative w-full h-full object-cover rounded-3xl shadow-xl" />
 
-                    <!-- Profile Image -->
-                    <img src="../images/myself.png" alt="Ashish Chavan"
-                        class="relative w-[26rem] h-[34rem] object-cover rounded-full shadow-soft border-4 border-white/20" />
-
-                    <!-- Floating Tech/AI Icons -->
+                    <!-- Floating Tech/AI Icons around the Box (Bigger Animation) -->
                     <img src="../images/react-2.svg" alt="React"
-                        class="absolute -top-12 -left-10 w-16 h-16 rounded-xl p-2 shadow-lg animate-float" />
+                        class="absolute -top-10 -left-10 w-20 h-20 rounded-xl p-4 shadow-2xl animate-float" />
                     <img src="../images/mysql-logo.svg" alt="MySQL"
-                        class="absolute -top-6 -right-10 w-16 h-16 rounded-xl p-2 shadow-lg animate-driftGlow" />
+                        class="absolute -top-8 -right-10 w-20 h-20 rounded-xl p-4 shadow-2xl animate-driftGlow" />
                     <img src="../images/python.svg" alt="Python"
-                        class="absolute top-1/3 -left-14 w-16 h-16 rounded-xl p-2 shadow-lg animate-blinkGlow" />
+                        class="absolute top-1/3 -left-14 w-20 h-20 rounded-xl p-4 shadow-2xl animate-blinkGlow" />
                     <img src="../images/tensorflow.svg" alt="TensorFlow"
-                        class="absolute bottom-1/4 -right-14 w-16 h-16 rounded-xl p-2 shadow-lg animate-float" />
+                        class="absolute bottom-1/4 -right-14 w-20 h-20 rounded-xl p-4 shadow-2xl animate-float" />
                     <img src="../images/pytorch.svg" alt="PyTorch"
-                        class="absolute -bottom-10 left-1/4 w-16 h-16 rounded-xl p-2 shadow-lg animate-driftGlow" />
+                        class="absolute -bottom-12 left-1/4 w-20 h-20 rounded-xl p-4 shadow-2xl animate-driftGlow" />
                     <img src="../images/ai-brain.svg" alt="AI"
-                        class="absolute -bottom-12 -right-12 w-16 h-16 rounded-xl p-2 shadow-lg animate-blinkGlow" />
+                        class="absolute -bottom-14 -right-14 w-20 h-20 rounded-xl p-4 shadow-2xl animate-blinkGlow" />
+
+
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -375,380 +346,195 @@
     <!-- ===== ABOUT ===== -->
     <main>
 
-        <section id="about" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+        <!-- About Section -->
+        <section id="about" class="relative min-h-screen flex items-center justify-center bg-cover bg-center"
             style="background-image: url('../images/5061807.jpg');">
 
             <!-- Dark overlay -->
-            <div class="absolute inset-0 bg-black/90"></div>
+            <div class="absolute inset-0 bg-black/70"></div>
 
-            <!-- Main Content -->
-            <div class="relative z-10 mx-auto max-w-4xl px-6 text-center space-y-10">
+            <!-- Content Container -->
+            <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
 
-                <!-- Animated Glow Frame -->
-                <div class="relative inline-block">
-                    <!-- <div
-                        class="absolute -inset-6 rounded-3xl blur-3xl bg-gradient-to-r from-cyan-400 via-pink-500 to-brand-2 opacity-70 animate-pulseGlow">
-                    </div> -->
+                <!-- Section Heading -->
+                <div class="mb-12 text-center">
                     <h2
-                        class="text-5xl font-extrabold text-center mb-1 bg-gradient-to-r from-cyan-400 via-pink-400 to-brand-2 bg-clip-text text-transparent">
+                        class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-600">
                         About Me
                     </h2>
+                    <div
+                        class="w-24 h-1 mx-auto mt-4 rounded bg-gradient-to-r from-cyan-400 via-pink-400 to-purple-600">
+                    </div>
                 </div>
 
-                <!-- Paragraphs -->
-                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn">
-                    🔥 I’m <span class="font-bold text-cyan-400">Ashish Chavan</span>, a passionate learner and aspiring
-                    <span class="text-brand-2 font-semibold">AI & Machine Learning Engineer</span>. My journey began in
-                    Pune,Maharashtra
-                    where my curiosity for technology evolved into a dedication to building innovative solutions that
-                    merge
-                    <span class="font-semibold">data, intelligence, and creativity</span>.
-                </p>
+                <!-- Content Grid -->
+                <div class="grid md:grid-cols-2 gap-12">
 
-                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-200">
-                    💡 Currently pursuing an <span class="font-semibold">MCA in Artificial Intelligence & Machine
-                        Learning</span>
-                    at Lovely Professional University, I am strengthening my expertise in
-                    <span class="text-brand-2 font-semibold">deep learning, NLP, computer vision, and data
-                        science</span>.
-                    I thrive on exploring how AI can be applied to solve <span class="font-semibold">real-world
-                        challenges</span>
-                    across industries such as healthcare, business intelligence, and research.
-                </p>
+                    <!-- Left Column -->
+                    <div class="space-y-8">
+                        <p class="text-lg leading-relaxed">
+                            I am <span class="font-bold text-cyan-400">Ashish Chavan</span>, a passionate learner and
+                            aspiring
+                            <span class="font-semibold text-purple-400">AI & Machine Learning Engineer</span> from Pune,
+                            Maharashtra.
+                            My curiosity for technology evolved into a dedication to building innovative solutions that
+                            merge <span class="font-semibold">data, intelligence, and creativity</span>.
+                        </p>
 
-                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-300">
-                    ⚡ My technical toolkit includes <span class="font-semibold">Python, C, C++, React.js, Node.js, SQL,
-                        MongoDB,
-                        TensorFlow, and PyTorch</span>. I am also well-versed in
-                    <span class="text-brand font-semibold">data visualization, problem-solving, and full-stack
-                        development</span>,
-                    giving me the ability to connect backend logic with intelligent AI models.
-                </p>
+                        <p class="text-lg leading-relaxed">
+                            Currently pursuing an <span class="font-semibold">MCA in Artificial Intelligence & Machine
+                                Learning</span>
+                            at Lovely Professional University, I am strengthening my expertise in
+                            <span class="font-semibold text-purple-400">deep learning, NLP, computer vision, and data
+                                science</span>.
+                            I enjoy exploring how AI can solve <span class="font-semibold">real-world challenges</span>.
+                        </p>
 
-                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-500">
-                    🎶 Beyond academics, I am an <span class="text-brand font-semibold">Advanced Hindustani classical
-                        flute
-                        player</span>, where discipline, creativity, and expression shape my approach to both music and
-                    technology.
-                    This balance between logic and artistry defines who I am.
-                </p>
+                        <p class="text-lg leading-relaxed">
+                            My technical toolkit includes <span class="font-semibold">Python, C, C++, React.js, Node.js,
+                                SQL, MongoDB,
+                                TensorFlow, and PyTorch</span>, along with skills in
+                            <span class="font-semibold text-purple-400">data visualization, problem-solving, and
+                                full-stack development</span>.
+                        </p>
+                    </div>
 
-                <p class="text-slate-300 leading-relaxed text-lg animate-fadeIn delay-700">
-                    🚀 I have contributed to projects in <span class="font-semibold">AI-based text classification,
-                        sentiment
-                        analysis, computer vision, and predictive analytics</span>. My vision is to leverage
-                    <span class="text-brand-2 font-semibold">AI-driven innovation</span> to create impactful solutions
-                    that empower
-                    people, improve decision-making, and transform businesses.
-                </p>
+                    <!-- Right Column -->
+                    <div class="space-y-8">
+                        <p class="text-lg leading-relaxed">
+                            Beyond academics, I am an <span class="font-semibold text-purple-400">Advanced Hindustani
+                                classical
+                                flute player</span>, which instills discipline, creativity, and expression in all
+                            aspects of life.
+                        </p>
 
-                <!-- Buttons -->
-                <!-- <div class="flex flex-wrap justify-center gap-4 mt-6">
-                    <a href="#skills"
-                        class="px-6 py-3 rounded-xl bg-gradient-to-r from-brand to-brand-2 text-black font-bold shadow-lg hover:scale-110 hover:shadow-2xl transition">
-                        🚀 Explore My Skills
-                    </a>
-                    <a href="#contact"
-                        class="px-6 py-3 rounded-xl border border-white text-white font-bold hover:bg-white hover:text-black hover:scale-110 transition">
-                        📩 Get in Touch
-                    </a>
-                </div> -->
+                        <p class="text-lg leading-relaxed">
+                            I have contributed to projects in <span class="font-semibold">AI-based text classification,
+                                sentiment
+                                analysis, computer vision, and predictive analytics</span>. My vision is to leverage
+                            <span class="font-semibold text-purple-400">AI-driven innovation</span> to create impactful
+                            solutions that empower people and transform businesses.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
         </section>
 
-        <!-- Tailwind Custom Animations -->
-        <style>
-            @keyframes pulseGlow {
-
-                0%,
-                100% {
-                    opacity: 0.6;
-                    transform: scale(1);
-                }
-
-                50% {
-                    opacity: 1;
-                    transform: scale(1.05);
-                }
-            }
-
-            .animate-pulseGlow {
-                animation: pulseGlow 4s ease-in-out infinite;
-            }
-
-            @keyframes fadeIn {
-                from {
-                    opacity: 0;
-                    transform: translateY(20px);
-                }
-
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-
-            .animate-fadeIn {
-                animation: fadeIn 1.2s ease forwards;
-            }
-
-            .delay-200 {
-                animation-delay: 0.2s;
-            }
-
-            .delay-300 {
-                animation-delay: 0.3s;
-            }
-
-            .delay-500 {
-                animation-delay: 0.5s;
-            }
-
-            .delay-700 {
-                animation-delay: 0.7s;
-            }
-        </style>
     </main>
-
-
     <!-- ====================================================================================================================== -->
 
     <!-- ===== SKILLS ===== -->
-    <main class="">
-        <section id="skills"
-            class="relative min-h-[100vh] flex flex-col items-center justify-center py-20 bg-cover bg-center"
-            style="background-image: url('../images/5061807.jpg');">
+    <section id="skills"
+        class="relative min-h-[100vh] flex flex-col items-center justify-center py-20 bg-cover bg-center"
+        style="background-image: url('../images/5061807.jpg');">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/90"></div>
 
-            <!-- Dark overlay -->
-            <div class="absolute inset-0 bg-black/90"></div>
+        <!-- Main content -->
+        <div class="relative z-10 w-full max-w-7xl px-6 text-center">
+            <h2 class="text-5xl font-extrabold text-cyan-400 mb-6">My Skills</h2>
+            <p class="text-slate-300 max-w-3xl mx-auto mb-14">
+                Organized into categories that showcase my core technical and professional strengths.
+            </p>
 
-            <!-- Content -->
-            <div class="relative z-10 max-w-6xl px-6 text-center">
-                <h2 class="text-5xl font-extrabold text-center mb-6  text-cyan-400">
-                    My Skills
-                </h2>
-
-                <p class="text-slate-300 max-w-3xl mx-auto mb-12">
-                    Continuously growing my technical expertise in software development and artificial intelligence.
-                    Focused on building impactful solutions by combining <span
-                        class="text-green-400">programming</span>,
-                    <span class="text-blue-400">data</span>, and <span class="text-yellow-400">AI</span>.
-                </p>
-
-                <!-- Skills Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-
-                    <!-- Programming Languages -->
-                    <div>
-                        <h3 class="text-yellow-400 text-2xl font-bold mb-4">Programming Languages</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">Python</span>
-                            <span class="px-4 py-2 border-2 border-green-500 text-green-500 rounded-lg">C</span>
-                            <span class="px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg">C++</span>
-                            <span class="px-4 py-2 border-2 border-blue-500 text-blue-500 rounded-lg">Java</span>
-
-                        </div>
+            <!-- Skill Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+                <!-- Category Box -->
+                <div
+                    class="group bg-black/40 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:shadow-cyan-400/40">
+                    <div
+                        class="bg-cyan-400/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg py-2 px-4 rounded-lg shadow-md mb-3 inline-block">
+                        Programming
                     </div>
+                    <div class="text-cyan-400 text-lg mb-5 animate-bounce">▼</div>
 
-                    <!-- Web Development -->
-                    <div>
-                        <h3 class="text-cyan-400 text-2xl font-bold mb-4">Web Development</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 border-2 border-green-500 text-green-500 rounded-lg">HTML</span>
-                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">CSS</span>
-                            <span
-                                class="px-4 py-2 border-2 border-purple-500 text-purple-500 rounded-lg">JavaScript</span>
-                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">React.js
-                            </span>
-                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">TailwindCSS</span>
-
-                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">Node.js</span>
-                        </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="skill-box">Python</div>
+                        <div class="skill-box">C</div>
+                        <div class="skill-box">C++</div>
+                        <div class="skill-box">Java</div>
                     </div>
+                </div>
 
-                    <!-- Databases -->
-                    <div>
-                        <h3 class="text-pink-400 text-2xl font-bold mb-4">Databases</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">MongoDB</span>
-                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">MySQL</span>
-                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">SQL</span>
-
-                        </div>
+                <div
+                    class="group bg-black/40 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:shadow-cyan-400/40">
+                    <div
+                        class="bg-cyan-400/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg py-2 px-4 rounded-lg shadow-md mb-3 inline-block">
+                        Web Development
                     </div>
+                    <div class="text-cyan-400 text-lg mb-5 animate-bounce">▼</div>
 
-                    <!-- AI & Machine Learning -->
-                    <div>
-                        <h3 class="text-green-400 text-2xl font-bold mb-4">AI & Machine Learning</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span
-                                class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">TensorFlow</span>
-                            <span class="px-4 py-2 border-2 border-red-500 text-red-500 rounded-lg">PyTorch</span>
-                            <span class="px-4 py-2 border-2 border-purple-500 text-purple-500 rounded-lg">Data
-                                Visualization</span>
-                        </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="skill-box">HTML</div>
+                        <div class="skill-box">CSS</div>
+                        <div class="skill-box">JavaScript</div>
+                        <div class="skill-box">React.js</div>
+                        <div class="skill-box">TailwindCSS</div>
+                        <div class="skill-box">Node.js</div>
                     </div>
+                </div>
 
-                    <!-- Software Development & Tools -->
-                    <div>
-                        <h3 class="text-blue-300 text-2xl font-bold mb-4">Software Development & Tools</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 border-2 border-orange-400 text-orange-400 rounded-lg">Git &
-                                GitHub</span>
-                            <span class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">VS Code</span>
-                            <span class="px-4 py-2 border-2 border-cyan-400 text-cyan-400 rounded-lg">Docker</span> <br>
-                            <span class="px-4 py-2 border-2 border-green-400 text-green-400 rounded-lg">Linux / Shell
-                                Scripting</span>
-                        </div>
+                <div
+                    class="group bg-black/40 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:shadow-cyan-400/40">
+                    <div
+                        class="bg-cyan-400/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg py-2 px-4 rounded-lg shadow-md mb-3 inline-block">
+                        AI / ML
                     </div>
+                    <div class="text-cyan-400 text-lg mb-5 animate-bounce">▼</div>
 
-                    <!-- Data Science & Analytics -->
-                    <div>
-                        <h3 class="text-purple-300 text-2xl font-bold mb-4">Data Science & Analytics</h3>
-                        <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-lg">Pandas</span>
-                            <span class="px-4 py-2 border-2 border-green-400 text-green-400 rounded-lg">NumPy</span>
-                            <span
-                                class="px-4 py-2 border-2 border-blue-400 text-blue-400 rounded-lg">Scikit-Learn</span>
-                            <span class="px-4 py-2 border-2 border-red-400 text-red-400 rounded-lg">Matplotlib</span>
-                            <span class="px-4 py-2 border-2 border-pink-400 text-pink-400 rounded-lg">Seaborn</span>
-                            <span class="px-4 py-2 border-2 border-purple-400 text-purple-400 rounded-lg">Power BI /
-                                Tableau</span>
-                        </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="skill-box">TensorFlow</div>
+                        <div class="skill-box">PyTorch</div>
+                        <div class="skill-box">Scikit-Learn</div>
+                        <div class="skill-box">Data Visualization</div>
                     </div>
+                </div>
 
+                <div
+                    class="group bg-black/40 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:shadow-cyan-400/40">
+                    <div
+                        class="bg-cyan-400/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg py-2 px-4 rounded-lg shadow-md mb-3 inline-block">
+                        Tools
+                    </div>
+                    <div class="text-cyan-400 text-lg mb-5 animate-bounce">▼</div>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="skill-box">Git & GitHub</div>
+                        <div class="skill-box">VS Code</div>
+                        <div class="skill-box">Docker</div>
+                        <div class="skill-box">Linux / Shell</div>
+                        <div class="skill-box">Jupyter / Colab</div>
+                    </div>
+                </div>
+
+                <div
+                    class="group bg-black/40 border border-cyan-400/30 rounded-2xl p-6 backdrop-blur-md shadow-lg transition-transform duration-500 hover:-translate-y-1 hover:shadow-cyan-400/40">
+                    <div
+                        class="bg-cyan-400/20 border border-cyan-400/50 text-cyan-300 font-bold text-lg py-2 px-4 rounded-lg shadow-md mb-3 inline-block">
+                        Soft Skills
+                    </div>
+                    <div class="text-cyan-400 text-lg mb-5 animate-bounce">▼</div>
+
+                    <div class="flex flex-col gap-4">
+                        <div class="skill-box">Team Collaboration</div>
+                        <div class="skill-box">Communication</div>
+                        <div class="skill-box">Problem Solving</div>
+                        <div class="skill-box">Leadership</div>
+                        <div class="skill-box">Time Management</div>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
-
+        </div>
+    </section>
+    <style>
+        .skill-box {
+            @apply bg-black/50 border border-cyan-400/20 text-slate-200 rounded-lg py-2 px-3 text-center text-sm transition-all duration-300 cursor-pointer hover:bg-cyan-400/20 hover:shadow-md hover:shadow-cyan-400/30 hover:scale-105;
+        }
+    </style>
 
     <!--================================================================================================================== -->
-
-    <!-- ===== ACADEMICS ===== -->
-    <main class="">
-        <section id="academics" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
-            style="background-image: url('../images/5061807.jpg');">
-
-            <!-- Dark overlay -->
-            <div class="absolute inset-0 bg-black/90"></div>
-
-            <!-- Content -->
-            <div class="relative z-10 mx-auto max-w-5xl px-6">
-                <h2
-                    class="text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-pink-400 to-brand-2 bg-clip-text text-transparent">
-                    🎓 Academics
-                </h2>
-
-                <!-- Timeline -->
-                <div class="relative">
-                    <!-- Vertical Line -->
-                    <span
-                        class="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400 via-white/20 to-transparent"></span>
-
-                    <div class="pl-12 space-y-10">
-
-                        <!-- MCA -->
-                        <div
-                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.2s]">
-                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-blue-500 shadow-lg"></span>
-                            <h3 class="font-bold text-xl">MCA (AI & ML) – Lovely Professional University, Punjab</h3>
-                            <p class="text-slate-300">2025 – 2027 (Pursuing)</p>
-
-                            <!-- <a href="https://drive.google.com/file/d/mca-certificate-id/view?usp=sharing"
-                                target="_blank" class="inline-block mt-3 px-4 py-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 
-                     text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
-                     duration-300 hover:scale-110 animate-[flame_2s_infinite_alternate]">
-                                🔥 View Certificate
-                            </a> -->
-                        </div>
-
-                        <!-- BBA -->
-                        <div
-                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.4s]">
-                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-cyan-400 shadow-lg"></span>
-                            <h3 class="font-bold text-xl">Bachelor of Computer Applications – Pratibha College, Pune
-                            </h3>
-
-                            <!-- Flexbox for Under SPPU + Button -->
-                            <div class="flex items-center justify-between mt-2">
-                                <p class="text-slate-300">Under Savitribai Phule Pune University(2021 - 2024)</p>
-                                <a href="https://drive.google.com/file/d/1MkqXaIBoUPSianzXudK5lXG1VKHsFj0t/view?usp=drive_link"
-                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 
-             text-white font-semibold text-sm rounded-full shadow-lg 
-             transition-transform duration-300 hover:scale-110">
-                                    View Certificate
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <!-- HSC -->
-                        <div
-                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.6s]">
-                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-white shadow-lg"></span>
-                            <h3 class="font-bold text-xl mb-3">HSC – C.M.S. College, Pune</h3>
-
-                            <!-- Flex row: text left + button right -->
-                            <div class="flex items-center justify-between">
-                                <p class="text-slate-300">Commerce / IT Focus (2019 - 2021)</p>
-
-                                <a href="https://drive.google.com/file/d/1HG-mGJNeRWq93Lc2tNDDY1k8SAiwZctz/view?usp=drive_link"
-                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-green-500 via-teal-500 to-lime-500 
-                 text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
-                 duration-300 hover:scale-110">
-                                    View Certificate
-                                </a>
-                            </div>
-                        </div>
-
-
-
-                        <!-- SSC -->
-                        <div
-                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.8s]">
-                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-pink-400 shadow-lg"></span>
-                            <h3 class="font-bold text-xl mb-3">SSC – Vidyanand Bhavan High School, Pune</h3>
-
-                            <!-- Flex row: text left + button right -->
-                            <div class="flex items-center justify-between">
-                                <p class="text-slate-300">10th Grade (complited - 2019)</p>
-
-                                <a href="https://drive.google.com/file/d/1sxUnDjanGaFVgiqMDLmYsD-FqNQEyuDV/view?usp=drive_link"
-                                    target="_blank" class="px-4 py-1 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 
-                 text-white font-semibold text-sm rounded-full shadow-lg transition-transform 
-                 duration-300 hover:scale-110">
-                                    View Certificate
-                                </a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tailwind Flame Animation -->
-        <style>
-            @keyframes flame {
-                0% {
-                    transform: translateY(40px) scale(0.9);
-                    opacity: 0;
-                }
-
-                50% {
-                    transform: translateY(-5px) scale(1.05);
-                    opacity: 1;
-                }
-
-                100% {
-                    transform: translateY(0) scale(1);
-                    opacity: 0.95;
-                }
-            }
-        </style>
-    </main>
 
     <!--certifications-->
     <main class="">
@@ -760,7 +546,7 @@
             <div class="absolute inset-0 bg-black/90"></div>
 
             <div class="relative z-10 mx-auto max-w-7xl px-6 text-center">
-                <h2 class="text-5xl font-extrabold text-white mb-12">📜 Certifications</h2>
+                <h2 class="text-5xl font-extrabold text-white mb-12">📜 Certificate & Certifications</h2>
 
                 <!-- Carousel Container -->
                 <div class="relative">
@@ -1203,6 +989,7 @@
             }
         </style>
     </main>
+    <!--================================================================================================================== -->
 
     <!--=====PROJECTS=====-->
     <section id="projects" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
@@ -1318,28 +1105,219 @@
         </script>
     </section>
 
-    <!-- ===== 3 CONTACT ===== -->
-    <section id="contact" class="py-20">
-        <div class="mx-auto max-w-4xl px-6">
-            <h2 class="text-3xl font-extrabold text-center mb-10">Contact Me</h2>
-            <form id="contactForm" class="glass rounded-3xl p-8 space-y-4" data-aos="fade-up" novalidate>
-                <input type="text" name="name" placeholder="Your Name"
-                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
-                    required />
-                <input type="email" name="email" placeholder="Your Email"
-                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
-                    required />
-                <textarea name="message" rows="5" placeholder="Your Message"
-                    class="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/15 placeholder:text-slate-400"
-                    required></textarea>
-                <button
-                    class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-bold hover:scale-[1.02] transition">
-                    Send
+    <!--================================================================================================================== -->
+    <!-- ===== ACADEMICS ===== -->
+    <main>
+        <section id="academics" class="relative min-h-[100vh] flex items-center justify-center py-20 bg-cover bg-center"
+            style="background-image: url('../images/5061807.jpg');">
+
+            <!-- Dark overlay -->
+            <div class="absolute inset-0 bg-black/90"></div>
+
+            <!-- Content -->
+            <div class="relative z-10 mx-auto max-w-5xl px-6">
+                <h2
+                    class="text-5xl font-extrabold text-center mb-16 bg-gradient-to-r from-cyan-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                    🎓 Academics
+                </h2>
+
+                <!-- Timeline -->
+                <div class="relative">
+                    <!-- Animated Vertical Line (LEFT SIDE) -->
+                    <span
+                        class="absolute left-4 top-0 bottom-0 w-[3px] bg-gradient-to-b from-cyan-400 via-blue-400 to-pink-400 animate-gradientMove rounded-full"></span>
+
+                    <!-- Timeline Items -->
+                    <div class="pl-12 space-y-10">
+
+                        <!-- MCA -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.2s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-blue-500 shadow-lg"></span>
+                            <h3 class="font-bold text-xl text-cyan-300">
+                                MCA (AI & ML) – Lovely Professional University, Punjab
+                            </h3>
+                            <p class="text-slate-300">2025 – 2027 (Pursuing)</p>
+                        </div>
+
+                        <!-- BBA -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.4s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-cyan-400 shadow-lg"></span>
+                            <h3 class="font-bold text-xl text-pink-300">
+                                Bachelor of Computer Applications – Pratibha College, Pune
+                            </h3>
+                            <div class="flex items-center justify-between mt-2 flex-wrap">
+                                <p class="text-slate-300">Under Savitribai Phule Pune University (2021 - 2024)</p>
+                                <a href="https://drive.google.com/file/d/1MkqXaIBoUPSianzXudK5lXG1VKHsFj0t/view?usp=drive_link"
+                                    target="_blank"
+                                    class="px-4 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold text-sm rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- HSC -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.6s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-white shadow-lg"></span>
+                            <h3 class="font-bold text-xl text-green-300 mb-3">HSC – C.M.S. College, Pune</h3>
+                            <div class="flex items-center justify-between flex-wrap">
+                                <p class="text-slate-300">Commerce / IT Focus (2019 - 2021)</p>
+                                <a href="https://drive.google.com/file/d/1HG-mGJNeRWq93Lc2tNDDY1k8SAiwZctz/view?usp=drive_link"
+                                    target="_blank"
+                                    class="px-4 py-1 bg-gradient-to-r from-green-500 to-teal-600 text-white font-semibold text-sm rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- SSC -->
+                        <div
+                            class="glass rounded-2xl p-6 relative transform opacity-0 animate-[flame_1.5s_ease-in-out_forwards] [animation-delay:0.8s]">
+                            <span class="absolute left-2 top-8 w-4 h-4 rounded-full bg-pink-400 shadow-lg"></span>
+                            <h3 class="font-bold text-xl text-yellow-300 mb-3">SSC – Vidyanand Bhavan High School, Pune
+                            </h3>
+                            <div class="flex items-center justify-between flex-wrap">
+                                <p class="text-slate-300">10th Grade (Completed – 2019)</p>
+                                <a href="https://drive.google.com/file/d/1sxUnDjanGaFVgiqMDLmYsD-FqNQEyuDV/view?usp=drive_link"
+                                    target="_blank"
+                                    class="px-4 py-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white font-semibold text-sm rounded-full shadow-lg transition-transform duration-300 hover:scale-110">
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Animation Styles -->
+        <style>
+            @keyframes flame {
+                0% {
+                    transform: translateY(40px) scale(0.9);
+                    opacity: 0;
+                }
+
+                50% {
+                    transform: translateY(-5px) scale(1.05);
+                    opacity: 1;
+                }
+
+                100% {
+                    transform: translateY(0) scale(1);
+                    opacity: 0.95;
+                }
+            }
+
+            @keyframes gradientMove {
+                0% {
+                    background-position: 0% 50%;
+                }
+
+                100% {
+                    background-position: 100% 50%;
+                }
+            }
+
+            .animate-gradientMove {
+                background-size: 200% 200%;
+                animation: gradientMove 3s linear infinite alternate;
+            }
+
+            .glass {
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                backdrop-filter: blur(10px);
+                transition: transform 0.3s ease;
+            }
+
+            .glass:hover {
+                transform: scale(1.02);
+                border-color: rgba(0, 255, 255, 0.3);
+            }
+        </style>
+    </main>
+
+
+    <!--================================================================================================================== -->
+    <!-- ===== CONTACT ME ===== -->
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="relative min-h-[90vh] flex items-center justify-center py-16 bg-cover bg-center"
+        style="background-image: url('../images/5061807.jpg');">
+        <!-- Dark overlay -->
+        <div class="absolute inset-0 bg-black/90"></div>
+
+        <!-- Content -->
+        <div class="relative z-10 w-[90%] max-w-md mx-auto text-center">
+            <h2
+                class="text-4xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                📩 Contact Me
+            </h2>
+
+            <form id="contactForm"
+                class="backdrop-blur-md bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4 text-left shadow-lg"
+                novalidate>
+                <!-- Web3Forms access key -->
+                <input type="hidden" name="access_key" value="eef8b9d1-1bd8-4091-806c-fbd0da15bf3f">
+
+                <!-- Hidden anti-spam fields -->
+                <input type="hidden" name="form_timestamp" id="form_timestamp">
+                <input type="hidden" name="form_nonce" id="form_nonce">
+                <input type="checkbox" name="botcheck" class="hidden" style="display:none;">
+
+                <!-- Name -->
+                <div>
+                    <label class="block text-slate-300 text-sm mb-1">Your Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name"
+                        class="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-slate-400 text-sm focus:ring-2 focus:ring-cyan-400 focus:outline-none"
+                        required>
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label class="block text-slate-300 text-sm mb-1">Your Email (Gmail only)</label>
+                    <input type="email" name="email" id="email" placeholder="you@gmail.com"
+                        class="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-slate-400 text-sm focus:ring-2 focus:ring-cyan-400 focus:outline-none"
+                        required>
+                    <p id="emailHint" class="text-xs text-rose-400 mt-1 hidden">Please use a valid @gmail.com address.
+                    </p>
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label class="block text-slate-300 text-sm mb-1">Your Message</label>
+                    <textarea name="message" id="message" rows="4" placeholder="Type your message..."
+                        class="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder:text-slate-400 text-sm focus:ring-2 focus:ring-cyan-400 focus:outline-none"
+                        required></textarea>
+                </div>
+
+                <!-- reCAPTCHA v2 -->
+                <div class="flex justify-center mt-2">
+                    <div class="g-recaptcha" data-sitekey="6Lcctv0rAAAAAAaNIJtQ1n3Rs7ydLvLRfgc8mGhr"></div>
+                </div>
+
+                <!-- Submit -->
+                <button id="submitBtn" type="submit"
+                    class="w-full py-2.5 mt-4 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold text-sm hover:scale-[1.02] transition-transform">
+                    Send Message
                 </button>
-                <p id="formStatus" class="text-sm text-slate-300"></p>
+
+                <p id="formStatus" class="text-xs text-center text-slate-300 mt-2"></p>
             </form>
         </div>
+
+        <!-- Google reCAPTCHA script -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     </section>
+
+
+
+
+    <!--================================================================================================================== -->
 
     <!-- ===== FOOTER ===== -->
     <footer class="border-t border-white/10 bg-black/60">
